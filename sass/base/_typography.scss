@@ -1,0 +1,33 @@
+
+// Text colors
+.text-gray {
+    color: $col-gray-400;
+}
+
+.text-gray-darker {
+    color: $col-gray-500;
+}
+
+.text-success {
+    color: $col-status-success;
+}
+
+.text-fail {
+    color: $col-status-fail;
+}
+
+// Font weights
+
+.font-bold {
+    font-weight: bold;
+}
+
+.font-normal {
+    font-weight: 400;
+}
+
+// Text transform
+
+.uppercase {
+    text-transform: uppercase;
+}

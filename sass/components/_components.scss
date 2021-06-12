@@ -1,0 +1,228 @@
+
+.listing-card {
+    @extend .card;
+    display: grid;
+    cursor: pointer;
+    position: relative;
+    padding-top: 4rem;
+
+    &__header {
+        margin-bottom: .2rem;
+    }
+
+    &__images {
+        margin-bottom: 1.4rem;
+
+        .product {
+            max-width: 17.7rem;
+            width: 100%;
+            height: auto;
+        }
+
+        .mark {
+            width: auto;
+            height: auto;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    }
+
+    &__advantages {
+        margin-bottom: 1.8rem;
+
+        li {
+            grid-template-columns: 2rem 1fr;
+        }
+    }
+
+    &__price-box {
+        margin-bottom: 1.8rem;
+    }
+
+    &__bulletpoints {
+        margin-bottom: 1.4rem;
+        grid-template-rows: repeat(3, min-content);
+
+        li {
+            grid-template-columns: 2.3rem 1fr;
+            column-gap: .9rem;
+            align-items: center;
+        }
+    }
+
+    @include media-query($breakpoint-sm) {
+        grid-template-columns: 21.2rem 1fr 27.3rem;
+        grid-template-rows: minmax(8.7rem, auto) minmax(2.3rem, auto) 1fr auto;
+
+        &__header {
+            margin-right: 3.2rem;
+            margin-bottom: 2.3rem;
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        &__images {
+            margin-bottom: 0;
+            margin-right: 3.2rem;
+            grid-column: 1;
+            grid-row: 1 / -1;
+        }
+
+        &__advantages {
+            margin-right: 3.2rem;
+            margin-bottom: 0;
+            grid-column: 2;
+            grid-row: 2 / -1;
+        }
+
+        &__price-box {
+            grid-column: 3;
+            grid-row-start: 1;
+            grid-row-end: 3;
+        }
+
+        &__bulletpoints {
+            margin-bottom: 2.6rem;
+            grid-column: 3;
+            grid-row: 3;
+        }
+
+        &__add-to-basket {
+            grid-column: 3;
+            grid-row: 4;
+        }
+    }
+
+    @include media-query($breakpoint-lg) {
+        grid-template-columns: 37.9rem 1fr 27.3rem;
+        grid-template-rows: minmax(8.7rem, auto) minmax(2.3rem, auto) 1fr auto;
+
+        &__images {
+            .product {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+.small-badge {
+    display: inline-block;
+    padding: .3rem .6rem;
+    color: $col-status-fail;
+    font-weight: 400;
+    font-size: $text-xsm;
+    line-height: 1.8rem;
+    background-color: rgba($col-status-fail, 0.2);
+    border-radius: $rounded-sm;
+}
+
+.star-list {
+    display: inline-grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: .2rem;
+
+    :not(.not-active) {
+        fill: $col-yellow-400;
+    }
+}
+
+.progress-bar {
+    position: relative;
+    background: $col-gray-450;
+    height: 4px;
+    width: 100%;
+    border-radius: 3px;
+    overflow: hidden;
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+    
+    &--low {
+        @extend .progress-bar;
+
+        &::after {
+            background-color: $col-status-fail;
+            width: 33.33%;
+        }
+    }
+
+    &--full {
+        @extend .progress-bar;
+
+        &::after {
+            background-color: $col-status-success;
+            width: 100%;
+        }
+    }
+}
+
+.btn-primary {
+    padding: 1rem 3.3rem;
+    background-image: $gr-primary;
+    color: $col-white;
+    text-align: center;
+    border-radius: $rounded-lg;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+    transition: box-shadow .15s;
+
+    img, svg, i {
+        margin-right: 1rem;
+    }
+
+    @include media-query($breakpoint-sm) {
+        font-size: 2rem;
+        line-height: 2.7rem;
+    }
+
+    &:hover {
+        box-shadow: $shadow-primary;
+    }
+}
+
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: .8rem 0.6rem;
+    background: $col-white;
+    border-radius: $rounded-sm;
+
+    &, &:hover, &:active, &:focus {
+        border: 1px solid $col-gray-400;
+    }
+}
+
+.badge {
+    position: absolute;
+    top: -2px;
+    left: 1.9rem;
+    padding: .3rem 1rem;
+
+    font-size: $text-xsm;
+    line-height: 2rem;
+    font-weight: bold;
+    color: $col-white;
+    background-image: $gr-dark;
+    border-radius: 0px 0px 5px 5px;
+
+    @include media-query($breakpoint-sm) {
+        left: 3rem;
+        padding: 1rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+}

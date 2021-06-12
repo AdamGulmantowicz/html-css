@@ -1,0 +1,60 @@
+
+// Screen widths
+$breakpoint-sm: 880px;
+$breakpoint-lg: 1024px;
+$max-w-container: 1582px;
+
+// Colors
+$col-black: #000000;
+$col-dark-300: #333333;
+$col-dark-400: #1E1E1E;
+$col-gray-400: #BFBFBF;
+$col-gray-450: #CFCFCF;
+$col-gray-500: #828282;
+$col-white: #ffffff;
+
+$col-green-400: #27AE60;
+$col-yellow-400: #F2C94C;
+$col-red-400: #ED143D;
+
+$col-pink-400: #E61577;
+$col-pink-600: #992478;
+
+$col-primary: $col-pink-400;
+$col-primary-darker: $col-pink-600;
+
+$col-status-success: $col-green-400;
+$col-status-fail: $col-red-400;
+
+$col-rating: $col-yellow-400;
+
+$text-primary: $col-dark-300;
+$text-primary-darker: $col-black; 
+$text-primary-lighter: $col-gray-400;
+
+$text-gray: $col-gray-500;
+
+// Gradients
+$gr-primary: linear-gradient(116.7deg, $col-primary 9.51%, $col-primary-darker 95.18%);
+$gr-dark: linear-gradient(116.7deg, $col-dark-300 9.51%, $col-dark-400 95.18%);
+
+// Shadows
+$shadow-primary: 0px 0px 20px $col-primary;
+$shadow: 0px 0px 20px rgba($col-black, 0.12);
+
+// Border radius
+$rounded-sm: .4rem;
+$rounded-lg: 2rem;
+
+// Font families
+$font-primary: Open-sans, sans-serif;
+$font-secondary: Roboto, sans-serif;
+
+// Font sizes
+$text-xsm: 1.2rem;
+$text-sm: 1.4rem;
+$text-base: 1.6rem;
+$text-lg: 1.8rem;
+$text-2lg: 2rem;
+$text-3lg: 2.6rem;
+$text-4lg: 3rem;
