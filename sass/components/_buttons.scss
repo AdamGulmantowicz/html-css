@@ -1,0 +1,43 @@
+
+.btn-primary {
+    display: flex;
+    align-items: center;
+
+    padding: 1rem 3.3rem;
+    color: $col-white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.6rem;
+    line-height: 2.2rem;
+
+    background-image: $gr-primary;
+    border-radius: $rounded-lg;
+    transition: box-shadow .15s;
+
+    img, svg, i {
+        margin-right: 1rem;
+    }
+
+    @include media-query($breakpoint-sm) {
+        font-size: 2rem;
+        line-height: 2.7rem;
+    }
+
+    &:hover {
+        box-shadow: $shadow-primary;
+    }
+}
+
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: .8rem 0.6rem;
+    background: $col-white;
+    border-radius: $rounded-sm;
+
+    &, &:hover, &:active, &:focus {
+        border: 1px solid $col-gray-400;
+    }
+}

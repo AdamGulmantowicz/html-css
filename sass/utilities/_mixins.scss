@@ -72,7 +72,7 @@
         }
     
         .#{$prefix}gap-x-#{$i} {
-            column-gap: $i * 0.2rem;;
+            column-gap: $i * 0.2rem;
         }
     
         .#{$prefix}gap-y-#{$i} {
@@ -93,91 +93,12 @@
         margin-bottom: auto;
     }
 
-    .#{$prefix}block {
-        display: block;
-    }
-
-    .#{$prefix}grid {
-        display: grid;
-    }
-    
-    .#{$prefix}flex {
-        display: flex;
-    }
-    
-    .#{$prefix}inline-block {
-        display: inline-block;
-    }
-    
-    .#{$prefix}hidden {
-        display: none;
-    }
-
-    .#{$prefix}flex-col {
-        flex-direction: column;
-    }
-    
-    .#{$prefix}items-center {
-        align-items: center;
-    }
-
-    .#{$prefix}items-start {
-        align-items: flex-start;
-    }
-    
-    .#{$prefix}justify-center {
-        justify-content: center;
-    }
-    
-    .#{$prefix}flex-center {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
     .#{$prefix}w-full {
         width: 100%;
     }
 
+    @include displays($prefix);
+
     // Text properties
-    .#{$prefix}h1 {
-        font-size: $text-4lg;
-        line-height: 3.54rem;
-        font-weight: bold;
-    }
-
-    .#{$prefix}h1\.5 {
-        font-size: $text-3lg;
-        line-height: 3.5rem;
-    }
-
-    .#{$prefix}h2 {
-        font-size: $text-lg;
-        line-height: 2.12rem;
-    }
-
-    .#{$prefix}p1 {
-        font-size: $text-base;
-        line-height: 2.6rem;
-    }
-
-    .#{$prefix}p2 {
-        font-size: $text-sm;
-        line-height: 1.9rem;
-    }
-
-    .#{$prefix}p3 {
-        font-size: $text-sm;
-        line-height: 1.8rem;
-    }
-
-    .#{$prefix}small-1 {
-        font-size: $text-sm;
-        line-height: 1.65rem;
-    }
-
-    .#{$prefix}small-2 {
-        font-size: $text-xsm;
-        line-height: 1.8rem;
-    }
+    @include typography($prefix);
 }

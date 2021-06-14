@@ -1,0 +1,32 @@
+
+.badge {
+    position: absolute;
+    top: -2px;
+    left: 1.9rem;
+    padding: .3rem 1rem;
+
+    font-size: $text-xsm;
+    line-height: 2rem;
+    font-weight: bold;
+    color: $col-white;
+    background-image: $gr-dark;
+    border-radius: 0px 0px 5px 5px;
+
+    @include media-query($breakpoint-sm) {
+        left: 3rem;
+        padding: 1rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+}
+
+.small-badge {
+    display: inline-block;
+    padding: .3rem .6rem;
+    color: $col-status-fail;
+    font-weight: 400;
+    font-size: $text-xsm;
+    line-height: 1.8rem;
+    background-color: rgba($col-status-fail, 0.2);
+    border-radius: $rounded-sm;
+}

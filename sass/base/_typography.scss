@@ -1,33 +1,74 @@
 
-// Text colors
-.text-gray {
-    color: $col-gray-400;
-}
+@mixin typography($prefix) {
+    .#{$prefix}h1 {
+        font-size: $text-4lg;
+        line-height: 3.54rem;
+        font-weight: bold;
+    }
 
-.text-gray-darker {
-    color: $col-gray-500;
-}
+    .#{$prefix}h1\.5 {
+        font-size: $text-3lg;
+        line-height: 3.5rem;
+    }
 
-.text-success {
-    color: $col-status-success;
-}
+    .#{$prefix}h2 {
+        font-size: $text-lg;
+        line-height: 2.12rem;
+    }
 
-.text-fail {
-    color: $col-status-fail;
-}
+    .#{$prefix}p1 {
+        font-size: $text-base;
+        line-height: 2.6rem;
+    }
 
-// Font weights
+    .#{$prefix}p2 {
+        font-size: $text-sm;
+        line-height: 1.9rem;
+    }
 
-.font-bold {
-    font-weight: bold;
-}
+    .#{$prefix}p3 {
+        font-size: $text-sm;
+        line-height: 1.8rem;
+    }
 
-.font-normal {
-    font-weight: 400;
-}
+    .#{$prefix}small-1 {
+        font-size: $text-sm;
+        line-height: 1.65rem;
+    }
 
-// Text transform
+    .#{$prefix}small-2 {
+        font-size: $text-xsm;
+        line-height: 1.8rem;
+    }
 
-.uppercase {
-    text-transform: uppercase;
+    // Text colors
+    .#{$prefix}text-gray {
+        color: $col-gray-400;
+    }
+
+    .#{$prefix}text-gray-darker {
+        color: $col-gray-500;
+    }
+
+    .#{$prefix}text-success {
+        color: $col-status-success;
+    }
+
+    .#{$prefix}text-fail {
+        color: $col-status-fail;
+    }
+
+    // Font weights
+    .#{$prefix}font-bold {
+        font-weight: bold;
+    }
+
+    .#{$prefix}font-normal {
+        font-weight: 400;
+    }
+
+    // Text transform
+    .#{$prefix}uppercase {
+        text-transform: uppercase;
+    }
 }
